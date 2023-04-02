@@ -17,3 +17,8 @@ npx eslint --init
 npm install -D eslint-plugin-react
 npm install -D eslint-plugin-react-hooks
 ```
+
+### Prettier
+```
+npm install --save-dev --save-exact prettier
+```
