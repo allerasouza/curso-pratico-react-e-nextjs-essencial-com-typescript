@@ -22,3 +22,8 @@ npm install -D eslint-plugin-react-hooks
 ```
 npm install --save-dev --save-exact prettier
 ```
+
+### Integration between Eslint and Prettier
+```
+npm install -D eslint-plugin-prettier eslint-config-prettier
+```
