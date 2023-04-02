@@ -9,3 +9,11 @@ Link: [https://www.udemy.com/course/curso-pratico-react-e-nextjs-essencial-com-t
 ```
 ID: EditorConfig.EditorConfig
 ```
+
+### Eslint
+```
+npm install -D eslint
+npx eslint --init
+npm install -D eslint-plugin-react
+npm install -D eslint-plugin-react-hooks
+```
