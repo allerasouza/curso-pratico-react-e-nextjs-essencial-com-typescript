@@ -1,7 +1,21 @@
-## Libs
+## Installed Libs and Extensions
+
+### React router dom
 ```
 npm install react-router-dom
 npm install -D @types/react-router-dom
+```
+
+### VSCode Styled components Extension
+```
+Name: vscode-styled-components
+ID: styled-components.vscode-styled-components
+```
+
+### Styled components
+```
+npm install --save styled-components
+npm install -D @types/styled-components
 ```
 
 ---
