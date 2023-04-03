@@ -42,3 +42,5 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const Repos = styled.section``;

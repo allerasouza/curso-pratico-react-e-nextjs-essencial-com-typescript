@@ -23,6 +23,11 @@ npm install -D @types/styled-components
 npm install polished
 ```
 
+### React Icons
+```
+npm install react-icons
+```
+
 ---
 
 ## Available Scripts
