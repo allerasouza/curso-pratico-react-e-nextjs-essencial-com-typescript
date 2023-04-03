@@ -18,6 +18,11 @@ npm install --save styled-components
 npm install -D @types/styled-components
 ```
 
+### Polished
+```
+npm install polished
+```
+
 ---
 
 ## Available Scripts
