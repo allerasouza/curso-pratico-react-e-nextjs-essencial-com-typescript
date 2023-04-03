@@ -28,6 +28,11 @@ npm install polished
 npm install react-icons
 ```
 
+### Axios
+```
+npm install axios
+```
+
 ---
 
 ## Available Scripts
