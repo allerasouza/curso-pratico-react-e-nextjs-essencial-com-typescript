@@ -44,6 +44,7 @@ export const Dashboard: React.FC = () => {
     const repository = response.data;
     setRepos([...repos, repository]);
     setNewRepo('');
+    setInputError('');
   }
 
   return (
