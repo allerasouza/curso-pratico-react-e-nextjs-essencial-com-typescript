@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Header, RepoInfo } from './styles';
+import { Issues, Header, RepoInfo } from './styles';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import { FiChevronLeft } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 interface RepositoryParams {
   [repository: string]: string;
@@ -44,6 +44,16 @@ export const Repo: React.FC = () => {
           </li>
         </ul>
       </RepoInfo>
+
+      <Issues>
+        <Link to="/">
+          <div>
+            <strong>Título de um issue</strong>
+            <p>Descrição de um issue</p>
+          </div>
+          <FiChevronRight size={20} />
+        </Link>
+      </Issues>
     </>
   );
 };
