@@ -48,11 +48,16 @@ export const Dashboard: React.FC = () => {
       setInputError('Informe o username/repositório');
       return;
     }
-    const response = await api.get<GithubRepository>(`repos/${newRepo}`);
-    const repository = response.data;
-    setRepos([...repos, repository]);
-    setNewRepo('');
-    formEl.current?.reset();
+    try {
+      const response = await api.get<GithubRepository>(`repos/${newRepo}`);
+      const repository = response.data;
+      setRepos([...repos, repository]);
+      setNewRepo('');
+      formEl.current?.reset();
+      setInputError('');
+    } catch {
+      setInputError('Repositório não encontrado no Github');
+    }
   }
 
   return (
