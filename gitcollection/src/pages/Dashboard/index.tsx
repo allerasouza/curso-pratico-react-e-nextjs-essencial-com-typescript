@@ -1,4 +1,10 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Error, Form, Repos, Title } from './styles';
 import logo from '../../assets/logo.svg';
@@ -24,6 +30,7 @@ export const Dashboard: React.FC = () => {
   });
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
+  const formEl = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
     localStorage.setItem('@GitColletion:repositories', JSON.stringify(repos));
@@ -45,7 +52,7 @@ export const Dashboard: React.FC = () => {
     const repository = response.data;
     setRepos([...repos, repository]);
     setNewRepo('');
-    setInputError('');
+    formEl.current?.reset();
   }
 
   return (
@@ -53,7 +60,11 @@ export const Dashboard: React.FC = () => {
       <img src={logo} alt="GitCollection" />
       <Title>Catálogo de repositórios do Github</Title>
 
-      <Form hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
+      <Form
+        ref={formEl}
+        hasError={Boolean(inputError)}
+        onSubmit={handleAddRepo}
+      >
         <input
           placeholder="username/repository_name"
           onChange={handleInputChange}
