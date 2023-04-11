@@ -33,6 +33,11 @@ npm install react-icons
 npm install axios
 ```
 
+### Cra bundle analyzer
+```
+npm install -D cra-bundle-analyzer
+```
+
 ---
 
 ## Available Scripts
