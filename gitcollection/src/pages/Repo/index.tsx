@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Issues, Header, RepoInfo } from './styles';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { api } from '../../services/api';
 
 interface RepositoryParams {
   [repository: string]: string;
@@ -11,6 +12,15 @@ interface RepositoryParams {
 
 export const Repo: React.FC = () => {
   const { repository } = useParams<RepositoryParams>();
+
+  useEffect(() => {
+    api.get(`repos/${repository}`).then(response => console.log(response.data));
+
+    api
+      .get(`repos/${repository}/issues`)
+      .then(response => console.log(response.data));
+  }, [repository]);
+
   return (
     <>
       <Header>
