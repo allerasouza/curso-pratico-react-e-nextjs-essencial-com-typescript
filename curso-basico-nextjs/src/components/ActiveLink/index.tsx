@@ -6,10 +6,16 @@ interface ActiveLinkProps extends LinkProps {
   activeClassName: string;
 }
 
-export function ActiveLink({activeClassName, content, ...otherProps}: ActiveLinkProps ) {
+export function ActiveLink({
+  activeClassName,
+  content,
+  ...otherProps
+}: ActiveLinkProps) {
   const { asPath } = useRouter();
   const className = asPath === otherProps.href ? activeClassName : '';
   return (
-    <Link {...otherProps} className={className}>{content}</Link>
+    <Link {...otherProps} className={className}>
+      {content}
+    </Link>
   );
 }

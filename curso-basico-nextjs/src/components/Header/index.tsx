@@ -8,7 +8,11 @@ export function Header() {
         <img src="/logo.svg" alt="DevNews!" />
         <nav>
           <ActiveLink activeClassName={styles.active} content="Home" href="/" />
-          <ActiveLink activeClassName={styles.active} content="Posts" href="/posts" />
+          <ActiveLink
+            activeClassName={styles.active}
+            content="Posts"
+            href="/posts"
+          />
         </nav>
       </div>
     </header>
