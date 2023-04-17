@@ -1,7 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Installed libs
-
+## Run json server
+```
+npx json-server api.json -p 3333 -w
+```
 
 ---
 ## Getting Started

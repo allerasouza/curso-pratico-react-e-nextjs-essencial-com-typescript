@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-server": "npx json-server api.json -p 3333 -w"
   },
   "dependencies": {
     "next": "13.3.0",
