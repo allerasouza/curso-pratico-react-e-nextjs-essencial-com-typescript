@@ -1,16 +1,14 @@
-import Link from 'next/link';
+import { ActiveLink } from '../ActiveLink';
 import styles from './styles.module.scss';
-import { useRouter } from 'next/router';
 
 export function Header() {
-  const { asPath } = useRouter();
   return (
     <header className={styles.container}>
       <div className={styles.content}>
         <img src="/logo.svg" alt="DevNews!" />
         <nav>
-          <Link href="/" className={asPath === '/' ? styles.active : ''}>Home</Link>
-          <Link href="/posts" className={asPath === '/posts' ? styles.active : ''}>Posts</Link>
+          <ActiveLink activeClassName={styles.active} content="Home" href="/" />
+          <ActiveLink activeClassName={styles.active} content="Posts" href="/posts" />
         </nav>
       </div>
     </header>
