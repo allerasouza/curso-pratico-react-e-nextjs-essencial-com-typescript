@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 
-interface Post {
+export interface Post {
   id: string;
   title: string;
 }
