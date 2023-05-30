@@ -1,47 +1,24 @@
-import { GetServerSideProps } from 'next';
 import SEO from '../components/SEO';
-// import { useEffect, useState } from 'react';
+import styles from '../styles/home.module.scss';
 
-interface Post {
-  id: string;
-  title: string;
-}
-
-interface HomeProps {
-  posts: Post[];
-}
-
-export default function Home({ posts }: HomeProps) {
-  // const [posts, setPosts] = useState<Post[]>([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:3333/posts').then(response => {
-  //     response.json().then(data => {
-  //       setPosts(data);
-  //     });
-  //   });
-  // }, []);
-
+export default function Home() {
   return (
-    <div>
-      <SEO title="Home" excludeTitleSufix />
-      <h1>Posts</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <SEO title="Dev News" excludeTitleSufix />
+      <main className={styles.content}>
+        <section className={styles.section}>
+          <span>Olá Dev!</span>
+          <h1>
+            Bem-vindo ao <br />
+            <span>Dev</span>News!
+          </h1>
+          <p>
+            Um blog com conteúdos extremamente <br />
+            <span>relevantes para o seu aprendizado.</span>
+          </p>
+        </section>
+        <img src="/home.svg" alt="Home image" />
+      </main>
+    </>
   );
 }
-
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const response = await fetch('http://localhost:3333/posts');
-  const posts = await response.json();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};
