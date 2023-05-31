@@ -1,0 +1,5 @@
+{
+  "repositoryName": "aller-devnews",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}

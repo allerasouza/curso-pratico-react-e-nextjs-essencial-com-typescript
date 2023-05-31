@@ -7,15 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "npx json-server api.json -p 3333 -w -d 2000"
+    "json-server": "npx json-server api.json -p 3333 -w -d 2000",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@prismicio/client": "^7.0.1",
+    "@prismicio/next": "^1.2.1",
+    "@prismicio/react": "^2.6.2",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.62.0"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.2.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
@@ -28,6 +33,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.7",
+    "slice-machine-ui": "^1.1.0",
     "typescript": "5.0.4"
   }
 }
