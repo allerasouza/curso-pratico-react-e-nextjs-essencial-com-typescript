@@ -1,8 +1,9 @@
+import styles from './posts.module.scss';
 import SEO from '@/src/components/SEO';
+import { getPrismicClient } from '@/src/services/prismic';
+
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import styles from './posts.module.scss';
-import { getPrismicClient } from '../../services/prismic';
 import * as prismicH from '@prismicio/helpers';
 import { RTParagraphNode } from '@prismicio/types';
 
@@ -24,7 +25,7 @@ export default function Posts({ posts }: PostsProps) {
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map(post => (
-            <Link href="#" key={post.slug}>
+            <Link href={`/posts/${post.slug}`} key={post.slug}>
               <time>{post.updateAt}</time>
               <strong>{post.title}</strong>
               <p>{post.excerpt}</p>
